@@ -1,0 +1,42 @@
+/* Estilo base para todos los enlaces <a> */
+a {
+    color: inherit;
+    /* Hereda el color del texto donde esté (negro en cartas, blanco en fondo) */
+    text-decoration: none;
+    /* Quita el subrayado clásico */
+    position: relative;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/* La línea mágica debajo del texto */
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: #ff6b00;
+    /* El naranja de tus logos */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Lo que pasa cuando pasas el ratón por encima */
+a:hover {
+    color: #ff6b00;
+    /* El texto también cambia al naranja */
+}
+
+a:hover::after {
+    width: 100%;
+  
+}
+
+a:active {
+    transform: scale(0.95);
+    display: inline-block;
+  
+}
