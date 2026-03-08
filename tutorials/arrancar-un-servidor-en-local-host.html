@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <script src="../app/returnbutton.js"></script>
+    <link rel="stylesheet" href="../css/arrancar-un-servidor-en-local-host.css">
+    <link rel="shortcut icon" href="../media/logo2-bg.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karva Project - Arranca un servidor en LocalHost</title>
+</head>
+<body>
+    <div class="articulo-arranca-un-servidor-en-localhost">
+        <h2>Arranca un servidor en LocalHost</h2>
+        <img src="../media/fivemservidor.png" alt="Servidor de Fivem" class="local-host">
+        <div class="p-article">
+            <br>
+            Para abrir/arrancar un servidor en LocalHost debes :
+            <p>
+                
+                1. Descarga el servidor de FiveM
+                https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/
+                
+                2. Descomprime todo en una carpeta, por ejemplo:
+                C:\fivemserver
+                
+                3. Crea un archivo llamado server.cfg y pega esto:
+                
+                
+                
+                sv_hostname "Servidor Local"
+                sv_maxclients 8
+                endpoint_add_tcp "0.0.0.0:30120"
+                endpoint_add_udp "0.0.0.0:30120"
+                
+                start mapmanager
+                start chat
+                start spawnmanager
+                start sessionmanager
+                start basic-gamemode
+                start hardcap
+                
+                4. Crea start.bat y pega:
+                
+                FXServer.exe +exec server.cfg
+                
+                5. Ejecuta start.bat.
+                
+                6. En FiveM abre la consola (F8) y escribe:
+                
+                connect localhost
+            </p>
+        </div>
+        <button onclick="returnbutton()">Volver Al Inicio</button>
+    </div>
+</body>
+</html>
