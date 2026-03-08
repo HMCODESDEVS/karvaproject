@@ -1,3 +1,5 @@
 function returnbutton(){
-    window.location.href="https://karvaproject.netlify.app/web"
+    window.location.href="../index.html"
 }
+
+// que haces vagando por mis códigos , no están hechos con IA

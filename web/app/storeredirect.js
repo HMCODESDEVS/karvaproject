@@ -1,1 +1,3 @@
-window.location.href = "https://karvaproject.netlify.app/web/store/essentialidscript"
+window.location.href = "../store/essentialidscript"
+
+// Redirect al último elemento de la tienda en la FOLDER STORE 
